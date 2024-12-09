@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звітний документ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        /* Загальний стиль */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            font-family: 'Lobster', cursive;
+            color: #ff6600;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+            border-left: 3px solid #ff6600;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ff6600;
+            color: white;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .example {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Звітний документ</h1>
+        <p>Демонстрація використання селекторів HTML і CSS</p>
+    </header>
+    <main>
+        <section id="tag-selector">
+            <h2>Селектори тегу</h2>
+            <div class="example">
+                <h3>HTML-код:</h3>
+                <code>
+&lt;section&gt;
+  &lt;h2&gt;Привітання&lt;/h2&gt;
+  &lt;p&gt;Ласкаво просимо до нашого магазину!&lt;/p&gt;
+&lt;/section&gt;
+                </code>
+                <h3>CSS-код:</h3>
+                <code>
+section {
+  border: 2px solid #ffcc00;
+  padding: 10px;
+  background-color: #fff3cd;
+}
+                </code>
+                <h3>Результат:</h3>
+                <section style="border: 2px solid #ffcc00; padding: 10px; background-color: #fff3cd;">
+                    <h2>Привітання</h2>
+                    <p>Ласкаво просимо до нашого магазину!</p>
+                </section>
+            </div>
+        </section>
+        <section id="class-selector">
+            <h2>Селектори класу</h2>
+            <div class="example">
+                <h3>HTML-код:</h3>
+                <code>
+&lt;div class="product"&gt;
+  &lt;h3 class="title"&gt;Корм для котів&lt;/h3&gt;
+  &lt;p class="description"&gt;Високоякісний корм.&lt;/p&gt;
+&lt;/div&gt;
+                </code>
+                <h3>CSS-код:</h3>
+                <code>
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.title {
+  color: #ff6600;
+  font-size: 1.2rem;
+}
+.description {
+  color: #555;
+}
+                </code>
+                <h3>Результат:</h3>
+                <div class="product" style="border: 1px solid #ddd; padding: 10px;">
+                    <h3 class="title" style="color: #ff6600; font-size: 1.2rem;">Корм для котів</h3>
+                    <p class="description" style="color: #555;">Високоякісний корм.</p>
+                </div>
+            </div>
+        </section>
+        <section id="id-selector">
+            <h2>Селектори ідентифікатора</h2>
+            <div class="example">
+                <h3>HTML-код:</h3>
+                <code>
+&lt;div id="promo"&gt;
+  &lt;p&gt;Сьогодні знижка 10%!&lt;/p&gt;
+&lt;/div&gt;
+                </code>
+                <h3>CSS-код:</h3>
+                <code>
+#promo {
+  background-color: #ffecb3;
+  padding: 10px;
+  border: 1px dashed #ff9800;
+}
+                </code>
+                <h3>Результат:</h3>
+                <div id="promo" style="background-color: #ffecb3; padding: 10px; border: 1px dashed #ff9800;">
+                    <p>Сьогодні знижка 10%!</p>
+                </div>
+            </div>
+        </section>
+        <section id="other-selectors">
+            <h2>Інші селектори</h2>
+            <div class="example">
+                <h3>HTML-код:</h3>
+                <code>
+&lt;ul&gt;
+  &lt;li&gt;Коти&lt;/li&gt;
+  &lt;li&gt;Собаки&lt;/li&gt;
+&lt;/ul&gt;
+                </code>
+                <h3>CSS-код:</h3>
+                <code>
+li + li {
+  color: #ff6600;
+}
+ul > li {
+  font-weight: bold;
+}
+                </code>
+                <h3>Результат:</h3>
+                <ul>
+                    <li style="font-weight: bold;">Коти</li>
+                    <li style="color: #ff6600; font-weight: bold;">Собаки</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Звітний документ. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
